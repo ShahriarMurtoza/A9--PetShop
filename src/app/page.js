@@ -5,7 +5,8 @@ export default function Home() {
   return (
     <div>
 
-      hello
+      HEY BUDDY THIS IS OPTIMUS PRIME
+
     </div>
   );
 }
