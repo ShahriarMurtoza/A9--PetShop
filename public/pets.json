@@ -1,5 +1,6 @@
 [
   {
+    "id":1,
     "petName": "Bruno",
     "species": "Dog",
     "breed": "Golden Retriever",
@@ -15,6 +16,7 @@
     
   },
   {
+    "id":2,
     "petName": "Luna",
     "species": "Cat",
     "breed": "Persian",
@@ -30,6 +32,7 @@
     
   },
   {
+    "id":3,
     "petName": "Mango",
     "species": "Bird",
     "breed": "Cockatiel",
@@ -44,6 +47,7 @@
     "adopted": false
   },
   {
+    "id":4,
     "petName": "Max",
     "species": "Dog",
     "breed": "German Shepherd",
@@ -58,6 +62,7 @@
     "adopted": false
   },
   {
+    "id":5,
     "petName": "Coco",
     "species": "Rabbit",
     "breed": "Holland Lop",
@@ -72,6 +77,7 @@
     "adopted": false
   },
   {
+    "id":6,
     "petName": "Whiskers",
     "species": "Cat",
     "breed": "Maine Coon",
@@ -86,6 +92,7 @@
     "adopted": false
   },
   {
+    "id":7,
     "petName": "Bella",
     "species": "Dog",
     "breed": "Labrador Retriever",
@@ -100,6 +107,7 @@
     "adopted": false
   },
   {
+    "id":8,
     "petName": "Tweety",
     "species": "Bird",
     "breed": "Budgerigar",
@@ -114,6 +122,7 @@
     "adopted": false
   },
   {
+    "id":9,
     "petName": "Rocky",
     "species": "Dog",
     "breed": "Beagle",

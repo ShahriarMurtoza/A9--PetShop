@@ -1,12 +1,11 @@
-import { discoverValidationDepths } from "next/dist/server/app-render/instant-validation/instant-validation";
-import Image from "next/image";
+
+import banner from "./components/banner";
+
 
 export default function Home() {
   return (
     <div>
-
-      HEY BUDDY THIS IS OPTIMUS PRIME
-
+      <banner />
     </div>
   );
 }
