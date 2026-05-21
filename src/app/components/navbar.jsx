@@ -43,12 +43,7 @@ const Navbar = () => {
           <li>
             <Link href={"/"}>Home</Link>
           </li>
-          <li>
-            <Link href={"/all-courses"}>All Courses</Link>
-          </li>
-          <li>
-            <Link href={"/profile"}>Profile</Link>
-          </li>
+
 
           {/* Added Pages */}
           <li>
@@ -123,13 +118,6 @@ const Navbar = () => {
               <Link href={"/"}>Home</Link>
             </li>
 
-            <li>
-              <Link href={"/all-courses"}>All Courses</Link>
-            </li>
-
-            <li>
-              <Link href={"/profile"}>Profile</Link>
-            </li>
 
             {/* Added Pages */}
             <li>
