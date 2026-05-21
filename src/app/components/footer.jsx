@@ -4,9 +4,9 @@ import Image from "next/image";
 
 export default function Footer() {
     return (
-        <footer className="mt-12 bg-[#4d6e7d] text-white">
+        <footer className="mt-12 bg-[#000000] text-white">
             <div className="mx-auto max-w-7xl px-4 py-10 text-center sm:px-6 lg:px-8">
-                <h2 className="text-4xl font-bold tracking-tight">Pet Adopt House</h2>
+                <h2 className="text-4xl font-bold tracking-tight">Pet Shop & Adopt House</h2>
                 <p className="mt-2 text-sm text-white/80">
                     Are you ready to find your perfect companion
                 </p>

@@ -2,7 +2,7 @@
 "use client";
 
 import { useState } from "react";
-// import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth-client";
 import { Avatar, Button } from "@heroui/react";
 import Link from "next/link";
 import { Menu, X, Moon, Sun } from "lucide-react";
@@ -13,6 +13,7 @@ const Navbar = () => {
 
   const [menuOpen, setMenuOpen] = useState(false);
   const [darkMode, setDarkMode] = useState(false);
+
 
   const handleSignOut = async () => {
     await authClient.signOut();
@@ -35,7 +36,7 @@ const Navbar = () => {
 
         {/* Logo */}
         <div className="flex gap-2 items-center">
-          <h3 className="font-black text-2xl">SkillSphere</h3>
+          <h3 className="font-black text-2xl">Pet Shop</h3>
         </div>
 
         {/* Desktop Menu */}
@@ -44,23 +45,16 @@ const Navbar = () => {
             <Link href={"/"}>Home</Link>
           </li>
 
-
-          {/* Added Pages */}
-          <li>
-            <Link href={"/my-request"}>My Request</Link>
-          </li>
           <li>
             <Link href={"/all-pet"}>All Pet</Link>
           </li>
-          <li>
-            <Link href={"/my-listing"}>My Listing</Link>
-          </li>
+
         </ul>
 
         {/* Right Side */}
         <div className="flex gap-4 items-center">
 
-          {/* Theme Toggle */}
+          {/* Theme Toggle  */}
           <button onClick={handleThemeToggle}>
             {darkMode ? <Sun size={20} /> : <Moon size={20} />}
           </button>

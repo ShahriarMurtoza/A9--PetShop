@@ -5,6 +5,7 @@
 
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 const Hero = () => {
     return (
@@ -21,11 +22,14 @@ const Hero = () => {
                         Give loving pets a second chance at happiness. Discover friendly
                         cats ready to bring warmth, comfort, and joy into your home.
                     </p>
+                    <Link href={"/all-pet"}>
+                        <button className="flex items-center gap-2 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition">
+                            Adopt Now
+                            <ArrowRight size={18} />
+                        </button>
 
-                    <button className="flex items-center gap-2 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition">
-                        Adopt Now
-                        <ArrowRight size={18} />
-                    </button>
+                    </Link>
+
                 </div>
 
                 {/* Right Side */}

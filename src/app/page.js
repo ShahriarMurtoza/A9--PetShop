@@ -1,11 +1,15 @@
+import Hero from "./components/Hero";
+import PetCareTipsPage from "./components/petCareTips";
+import WhyAdoptPetPage from "./components/whyadopt";
 
-import banner from "./components/banner";
 
 
 export default function Home() {
   return (
     <div>
-      <banner />
+      <Hero />
+      < WhyAdoptPetPage />
+      < PetCareTipsPage />
     </div>
   );
 }
