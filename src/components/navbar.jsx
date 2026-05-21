@@ -112,14 +112,16 @@ const Navbar = () => {
               <Link href={"/"}>Home</Link>
             </li>
 
+            <li>
+              <Link href={"/all-pet"}>All Pet</Link>
+            </li>
 
-            {/* Added Pages */}
             <li>
               <Link href={"/my-request"}>My Request</Link>
             </li>
 
             <li>
-              <Link href={"/all-pet"}>All Pet</Link>
+              <Link href={"/add-pet"}>Add Pet</Link>
             </li>
 
             <li>

@@ -1,6 +1,6 @@
-import Hero from "./components/Hero";
-import PetCareTipsPage from "./components/petCareTips";
-import WhyAdoptPetPage from "./components/whyadopt";
+import Hero from "../components/Hero";
+import PetCareTipsPage from "../components/petCareTips";
+import WhyAdoptPetPage from "../components/whyadopt";
 
 
 
