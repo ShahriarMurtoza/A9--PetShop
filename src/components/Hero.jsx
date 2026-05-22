@@ -22,7 +22,7 @@ const Hero = () => {
                         Give loving pets a second chance at happiness. Discover friendly
                         cats ready to bring warmth, comfort, and joy into your home.
                     </p>
-                    <Link href={"/all-pet"}>
+                    <Link href={"/all-pets"}>
                         <button className="flex items-center gap-2 bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition">
                             Adopt Now
                             <ArrowRight size={18} />

@@ -24,6 +24,12 @@ export default function SignUpPage() {
     const image = e.target.image.value;
     const email = e.target.email.value;
     const password = e.target.password.value;
+    const confirmPassword = e.target.confirmPassword.value;
+
+    if (password !== confirmPassword) {
+      alert("Passwords do not match");
+      return;
+    }
     const { data, error } = await authClient.signUp.email({
       name,
       email,
@@ -96,6 +102,25 @@ export default function SignUpPage() {
           <Description>
             Must be at least 8 characters with 1 uppercase and 1 number
           </Description>
+          <FieldError />
+        </TextField>
+
+        <TextField
+          isRequired
+          name="confirmPassword"
+          type="password"
+          validate={(value) => {
+            if (value.length < 8) {
+              return "Confirm password must be at least 8 characters";
+            }
+
+            return null;
+          }}
+        >
+          <Label>Confirm Password</Label>
+
+          <Input placeholder="Confirm your password" />
+
           <FieldError />
         </TextField>
 

@@ -49,6 +49,21 @@ const Navbar = () => {
             <Link href={"/all-pets"}>All Pets</Link>
           </li>
 
+          {user && (
+            <>
+              <li>
+                <Link href={"/my-request"}>My Request</Link>
+              </li>
+
+              <li>
+                <Link href={"/add-pets"}>Add Pets</Link>
+              </li>
+
+              <li>
+                <Link href={"/my-listing"}>My Listing</Link>
+              </li>
+            </>
+          )}
         </ul>
 
         {/* Right Side */}
@@ -60,12 +75,23 @@ const Navbar = () => {
           </button>
 
           {!user && (
-            <ul className="hidden md:flex items-center text-sm gap-5">
+            <ul className="flex items-center text-sm gap-3">
               <li className="font-black text-md">
-                <Link href={"/signup"}>SignUp</Link>
+                <Link
+                  href={"/signup"}
+                  className="border px-3 py-1 rounded-lg"
+                >
+                  SignUp
+                </Link>
               </li>
+
               <li className="font-black text-md">
-                <Link href={"/signin"}>SignIn</Link>
+                <Link
+                  href={"/signin"}
+                  className="bg-black text-white px-3 py-1 rounded-lg"
+                >
+                  SignIn
+                </Link>
               </li>
             </ul>
           )}
@@ -95,7 +121,7 @@ const Navbar = () => {
 
           {/* Hamburger Button */}
           <button
-            className="md:hidden"
+            className="block"
             onClick={() => setMenuOpen(!menuOpen)}
           >
             {menuOpen ? <X size={28} /> : <Menu size={28} />}
@@ -103,19 +129,19 @@ const Navbar = () => {
         </div>
       </nav>
 
-      {/* Mobile Menu */}
-      {menuOpen && (
-        <div className="md:hidden py-4">
-          <ul className="flex flex-col gap-4 text-md">
+      {/* Mobile Menu
+      <ul className="flex flex-col gap-4 text-md border-t pt-4 mt-4">
 
-            <li>
-              <Link href={"/"}>Home</Link>
-            </li>
+        <li>
+          <Link href={"/"}>Home</Link>
+        </li>
 
-            <li>
-              <Link href={"/all-pets"}>All Pets</Link>
-            </li>
+        <li>
+          <Link href={"/all-pets"}>All Pets</Link>
+        </li>
 
+        {user && (
+          <>
             <li>
               <Link href={"/my-request"}>My Request</Link>
             </li>
@@ -128,19 +154,69 @@ const Navbar = () => {
               <Link href={"/my-listing"}>My Listing</Link>
             </li>
 
-            {!user && (
-              <>
-                <li>
-                  <Link href={"/signup"}>SignUp</Link>
-                </li>
+            <Button
+              onClick={handleSignOut}
+              size="sm"
+              variant="danger"
+            >
+              SignOut
+            </Button>
 
-                <li>
-                  <Link href={"/signin"}>SignIn</Link>
-                </li>
-              </>
-            )}
+          </>
+        )}
 
-            {user && (
+        
+      </ul> */}
+      {menuOpen && (
+        <ul className="flex flex-col gap-4 text-md border-t pt-4 mt-4">
+
+          <li>
+            <Link
+              href={"/"}
+              onClick={() => setMenuOpen(false)}
+            >
+              Home
+            </Link>
+          </li>
+
+          <li>
+            <Link
+              href={"/all-pets"}
+              onClick={() => setMenuOpen(false)}
+            >
+              All Pets
+            </Link>
+          </li>
+
+          {user && (
+            <>
+              <li>
+                <Link
+                  href={"/my-request"}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  My Request
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href={"/add-pets"}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Add Pet
+                </Link>
+              </li>
+
+              <li>
+                <Link
+                  href={"/my-listing"}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  My Listing
+                </Link>
+              </li>
+
               <li>
                 <Button
                   onClick={handleSignOut}
@@ -150,10 +226,11 @@ const Navbar = () => {
                   SignOut
                 </Button>
               </li>
-            )}
-          </ul>
-        </div>
+            </>
+          )}
+        </ul>
       )}
+
     </div>
   );
 };
